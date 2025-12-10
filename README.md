@@ -6,26 +6,32 @@ This project was created as a test implementation for research on poetic prompts
 
 ## Quick Start
 
-1. Install dependencies:
+1. Create a virtual environment (recommended):
 ```bash
-pip install selenium beautifulsoup4 python-dotenv openai anthropic
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-2. Set API key in `.env`:
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+3. Set API key in `.env`:
 ```bash
 OPENAI_API_KEY=your_key_here
 # OR
 ANTHROPIC_API_KEY=your_key_here
 ```
 
-3. Add RFCs to `input/rfcs.csv` (one per line):
+4. Add RFCs to `input/rfcs.csv` (one per line):
 ```csv
 rfc,id
 ABC123456XYZ,1
 ```
 **Note:** Add your RFCs to this file before running. The file must have a `rfc` header.
 
-4. Run:
+5. Run:
 ```bash
 python src/main.py
 ```
